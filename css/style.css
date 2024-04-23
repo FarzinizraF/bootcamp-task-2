@@ -1,0 +1,162 @@
+@import url(./fonts.css);
+
+/* resets */
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Root Variables */
+:root {
+  --clor-primary: #219f95;
+  --color-badge: #afcedd;
+  --color-text-primary: #1e1e1e;
+  --color-text-secondary: #234894;
+  --color-text-tertiary: #696969;
+  --color-white: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+* {
+  font-family: Vazirmatn;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+h1 {
+  margin: 2rem;
+}
+
+.badge {
+  display: inline-block;
+
+  height: 4rem;
+  width: 4rem;
+
+  text-align: center;
+  padding: 0.5rem;
+
+  background-color: var(--color-badge);
+  border-radius: 5px;
+  border: 2px solid var(--color-badge);
+
+  color: var(--color-text-secondary);
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.btn {
+  background-color: var(--clor-primary);
+  color: var(--color-white);
+  border: 1px solid var(--clor-primary);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 15rem;
+  top: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+/* Container */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.main-section {
+  height: auto;
+  width: auto;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+}
+
+.card {
+  width: 315px;
+  height: 155px;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  align-content: center;
+}
+
+.card__section {
+  margin: 2rem;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__title {
+  display: flex;
+  align-items: center;
+}
+
+.header__date {
+  color: var(--color-text-tertiary);
+}
+
+.header__title p {
+  margin-right: 1rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.body__subject {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.body__subject h2 {
+  font-weight: 900;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile__pic {
+  display: flex;
+  align-items: center;
+}
+
+.profile__pic p {
+  margin-right: 0.5rem;
+  font-weight: 600;
+}
+
+.profile img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
